@@ -677,18 +677,21 @@ body {
   margin-bottom: 16px;
 }
 
-.footer-social-links {
+.footer-social-links,
+.header-social-links {
   display: flex;
   gap: 16px;
   justify-content: center;
   margin-top: 8px;
 }
-.footer-social-link-box {
+.footer-social-link-box,
+.header-social-link-box {
   width: 40px;
   height: 40px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-link {
+.footer-social-link,
+.header-social-link {
   display: flex;
   background-color: var(--primary-color);
   border-radius: 50%;
@@ -699,10 +702,13 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
-.footer-social-link:focus {
+.footer-social-link:focus,
+.header-social-link:hover,
+.header-social-link:focus {
   background-color: #31d0aa;
 }
-.footer-bg-social {
+.footer-bg-social,
+.header-bg-social {
   fill: var(--color-light);
 }
 
@@ -785,7 +791,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fcfcfc;
+  background: var(--color-modal-bg);
   border-radius: 4px;
   width: 408px;
   min-height: 584px;
@@ -950,27 +956,76 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #2e2f4266;
   visibility: hidden;
   z-index: 999;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fcfcfc;
-  border-radius: 4px;
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px 24px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--color-white);
+  padding: 72px 16px 40px;
 }
 
 .menu-modal.is-open {
   visibility: initial;
+}
+
+.menu-modal .header-list {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-modal .header-address-list {
+  flex-direction: column;
+  padding: 0;
+}
+.menu-modal .close-modal-button {
+  background-color: var(--color-white);
+}
+
+.menu-modal .close-modal-button:hover,
+.menu-modal .close-modal-button:focus {
+  background-color: var(--primary-color-dark);
+  border: none;
+}
+
+.menu-modal .header-link {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+}
+.menu-modal .header-link.header-link-active {
+  color: var(--primary-color-dark);
+}
+.menu-modal .header-link.header-link-active:after {
+  height: 0;
+}
+.menu-modal .header-item {
+  padding: 0;
+}
+
+.menu-modal .header-address {
+  margin-top: 168px;
+  margin-bottom: 48px;
+}
+.menu-modal .header-address-list {
+  gap: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+.menu-modal .header-address-item:first-of-type .header-address-link {
+  color: var(--primary-color-dark);
+}
+
+.header-social-links {
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  .header-social-links {
+    justify-content: space-evenly;
+  }
 }
