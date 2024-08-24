@@ -18,37 +18,54 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="header-container container">
-      <nav class="header-nav">
-        <a href="./index.html" class="logo">Web<span class="logo-end-text">Studio</span></a>
-        <ul class="header-list">
-          <li class="header-item active"><a href="./index.html" class="header-link header-link-active">Studio</a></li>
-          <li class="header-item"><a href="" class="header-link">Portfolio</a></li>
-          <li class="header-item"><a href="" class="header-link">Contacts</a></li>
-        </ul>
-      </nav>
-      <address class="header-address">
-        <ul class="header-address-list">
-          <li class="header-address-item">
-            <a href="mailto:info@devstudio.com" class="header-address-link">info@devstudio.com</a>
-          </li>
-          <li class="header-address-item">
-            <a href="tel:+110001111111" class="header-address-link">+11 (000) 111-11-11</a>
-          </li>
-        </ul>
-      </address>
+      <div class="header-mobile">
+        <nav class="header-nav">
+          <a href="./index.html" class="logo">Web<span class="logo-end-text">Studio</span></a>
+          <div class="hamburger-menu">
+            <svg width="20px" height="20px">
+              <use href="./images/icons.svg#icon-menu" />
+            </svg>
+          </div>
+        </nav>
+      </div>
+      <div class="header-desktop">
+        <nav class="header-nav">
+          <a href="./index.html" class="logo">Web<span class="logo-end-text">Studio</span></a>
+          <ul class="header-list">
+            <li class="header-item active"><a href="./index.html" class="header-link header-link-active">Studio</a></li>
+            <li class="header-item"><a href="" class="header-link">Portfolio</a></li>
+            <li class="header-item"><a href="" class="header-link">Contacts</a></li>
+          </ul>
+        </nav>
+        <address class="header-address">
+          <ul class="header-address-list">
+            <li class="header-address-item">
+              <a href="mailto:info@devstudio.com" class="header-address-link">info@devstudio.com</a>
+            </li>
+            <li class="header-address-item">
+              <a href="tel:+110001111111" class="header-address-link">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+      </div>
     </div>
   </header>
+  <!-- End Header -->
 
   <main>
+    <!-- Hero section -->
     <section class="section hero-section">
       <div class="hero-container container">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
         <button type="button" class="primary-button order-button">Order Service</button>
       </div>
     </section>
+    <!-- End Hero section -->
 
+    <!-- Services section -->
     <section class="section services-section">
       <div class="services-container container">
         <h2 class="services-section-title visually-hidden">Solutions</h2>
@@ -100,7 +117,9 @@
         </ul>
       </div>
     </section>
+    <!-- End Services section -->
 
+    <!-- Team section -->
     <section class="section team-section">
       <div class="container">
         <h2 class="team-section-title">Our Team</h2>
@@ -236,7 +255,9 @@
         </ul>
       </div>
     </section>
+    <!-- End Team section -->
 
+    <!-- Portfolio section -->
     <section class="section portfolio-section">
       <div class="container">
         <h2 class="portfolio-section-title">Our Portfolio</h2>
@@ -310,8 +331,10 @@
         </ul>
       </div>
     </section>
+    <!-- End Portfolio section -->
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container container">
       <div class="footer-info">
@@ -367,6 +390,9 @@
       </div>
     </div>
   </footer>
+  <!-- End Footer -->
+
+  <!-- Modal form -->
   <div class="modal-backdrop">
     <div class="modal-container">
       <button type="button" class="close-modal-button">
@@ -434,6 +460,63 @@
       </form>
     </div>
   </div>
+  <!--End Modal form -->
+
+  <!-- Menu Modal -->
+  <div class="menu-modal">
+    <button type="button" class="close-modal-button">
+      <svg width="8" height="8" class="close-modal-button-bg">
+        <use href="./images/icons.svg#icon-close" />
+      </svg>
+    </button>
+    <ul class="header-list">
+      <li class="header-item active"><a href="./index.html" class="header-link header-link-active">Studio</a></li>
+      <li class="header-item"><a href="" class="header-link">Portfolio</a></li>
+      <li class="header-item"><a href="" class="header-link">Contacts</a></li>
+    </ul>
+    <address class="header-address">
+      <ul class="header-address-list">
+        <li class="header-address-item">
+          <a href="mailto:info@devstudio.com" class="header-address-link">info@devstudio.com</a>
+        </li>
+        <li class="header-address-item">
+          <a href="tel:+110001111111" class="header-address-link">+11 (000) 111-11-11</a>
+        </li>
+      </ul>
+    </address>
+    <ul class="footer-social-links">
+      <li class="footer-social-link-box">
+        <a href="#" class="footer-social-link">
+          <svg width="24" height="24" class="footer-bg-social">
+            <use href="./images/icons.svg#icon-instagram" />
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-link-box">
+        <a href="#" class="footer-social-link">
+          <svg width="24" height="24" class="footer-bg-social">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-link-box">
+        <a href="#" class="footer-social-link">
+          <svg width="24" height="24" class="footer-bg-social">
+            <use href="./images/icons.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-link-box">
+        <a href="#" class="footer-social-link">
+          <svg width="24" height="24" class="footer-bg-social">
+            <use href="./images/icons.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- End Menu Modal -->
   <script src="./index.js"></script>
 </body>
 
