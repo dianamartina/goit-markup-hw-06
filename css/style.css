@@ -1033,9 +1033,3 @@ body {
 .header-social-links {
   justify-content: space-between;
 }
-
-@media (min-width: 500px) {
-  .header-social-links {
-    justify-content: space-evenly;
-  }
-}
